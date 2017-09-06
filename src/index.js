@@ -18,7 +18,7 @@ export default function combineSectionReducers(reducers) {
     }
 
     let hasChanged = false
-    let nextState = typeof state === 'undefined' ? state : Object.assign({}, state)
+    let nextState = typeof state === 'undefined' ? {} : Object.assign({}, state)
     function forEachReducers(state, action, entireState) {
       for (let i = 0; i < reducerKeys.length; i ++) {
         const key = reducerKeys[i]
